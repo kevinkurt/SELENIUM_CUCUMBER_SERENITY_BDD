@@ -14,3 +14,5 @@ Feature: CP01 - Validar inicio de sesion
   Scenario: 2- validar con credenciales incorrectas
     When ingresa credenciales invalidas
     Then la aplicacion deberia mostrar un mensaje de error
+
+
