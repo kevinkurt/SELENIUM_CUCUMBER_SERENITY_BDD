@@ -11,6 +11,8 @@ import org.junit.Assert;
 
 public class LoginDefinitions {
 
+    // agregamos los pasos que vamos a heredar
+
     @Steps(shared = true)
     WebSite url;
 
