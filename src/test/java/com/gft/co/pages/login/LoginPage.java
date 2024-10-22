@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class LoginPage extends PageObject {
 
-
+    // mapeo de el usario
     @FindBy(id="user-name")
     protected WebElementFacade txt_username;
 
@@ -18,5 +18,16 @@ public class LoginPage extends PageObject {
 
     @FindBy(id="login-button")
     protected WebElementFacade btn_login;
+
+    @FindBy(className = "bm-burger-button")
+    protected WebElementFacade btn_menu;
+
+    @FindBy(id = "logout_sidebar_link")
+    protected WebElementFacade btn_deslogeo;
+
+    @FindBy(className = "login-box")
+    protected  WebElementFacade visualiacion_deslogueo;
+
+
 
 }

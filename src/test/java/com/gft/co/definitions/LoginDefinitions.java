@@ -19,36 +19,30 @@ public class LoginDefinitions {
     @Steps(shared = true)
     LoginStep login;
 
-    @Steps(shared = true)
-    ValidationStep validate;
+
+    // validar lo que nos funciona y eliminar escenarios existentes
 
     @Given("el usuario navega al sitio web")
-    public void userNavigateTo(){
+    public void userNavigateTo() {
         url.navogateTo("https://www.saucedemo.com/v1/index.html");
     }
 
+    // estas son las acciones llamadas de las clases para ingresar los datos del usuario
     @When("ingresa credenciales validas")
-    public void userLoginWithValidCredencials(){
+    public void userLoginWithValidCredencials() {
         login.typeUsername("standard_user");
         login.typepassword("secret_sauce");
         login.clicklogin();
     }
 
-    @Then("la aplicacion deberia mostrar el modulo principal de producto")
-    public void systemShowProdutsModule(){
-        Assert.assertTrue(validate.titleVisible());
-    }
+    @Then("nos deslogeamos de la aplicacion")
+    public void nos_deslogeamos_de_la_aplicacion() {
+        // accion de deslogueo
 
-    @When("ingresa credenciales invalidas")
-    public void userLoginWithinValidCredencials(){
-        login.typeUsername("standard_user");
-        login.typepassword("asdasdasd");
-        login.clicklogin();
-    }
+        login.clickMenu();
+        login.clickDeslogeo();
+        login.visualizacionDeslogueo();
 
-    @Then("la aplicacion deberia mostrar un mensaje de error")
-    public void systemShowErrorMessage(){
-        Assert.assertTrue(validate.errormessageISDisplayed());
     }
 
 

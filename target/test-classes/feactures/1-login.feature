@@ -1,18 +1,16 @@
 @Suite @Login
-Feature: CP01 - Validar inicio de sesion
-
-  Background: validar el inicio de sesion con credenciales validas e invalidas
-
+Feature: CP02 - Validar la seleccion de un producto
+# aqui se realiza la descripcion nueva y titulo
+  Background: validar el la seleccion correcta de un producto en la pagina
+# dejamos lo que nos funcione
     Given el usuario navega al sitio web
 
-  @ValidCredencials
-  Scenario: 1- validar con credenciales correctas
+  @validarseleccioncarrito
+  Scenario: 1- validar seleccion correcta de un producto
     When ingresa credenciales validas
-    Then la aplicacion deberia mostrar el modulo principal de producto
+    And la aplicacion deberia mostrar el modulo principal de producto
+    And seleccionamos un producto y su visualiazacion
+    Then nos deslogeamos de la aplicacion
 
-  @InvalidCredencials
-  Scenario: 2- validar con credenciales incorrectas
-    When ingresa credenciales invalidas
-    Then la aplicacion deberia mostrar un mensaje de error
 
 

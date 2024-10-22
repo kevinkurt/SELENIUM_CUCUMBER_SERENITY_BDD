@@ -28,5 +28,24 @@ public class LoginStep extends LoginPage {
     }
 
 
+    @Step("boton de menu")
+    public void clickMenu(){
+        btn_menu.click();
+    }
+
+    @Step("boton de deslogueo")
+    public void clickDeslogeo(){
+        btn_deslogeo.click();
+    }
+
+    // accion para visualizar el deslogueo
+    @Step("visualizacion del deslogueo")
+    public boolean visualizacionDeslogueo(){
+        return visualiacion_deslogueo.isDisplayed();
+    }
+
+
+
+
 
 }

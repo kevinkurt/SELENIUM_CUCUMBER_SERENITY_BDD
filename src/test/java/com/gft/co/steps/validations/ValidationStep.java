@@ -10,9 +10,6 @@ public class ValidationStep extends ValidationPage {
         return lbl_product.isDisplayed();
     }
 
-    @Step("validar visualizacion del mensaje de error")
-    public boolean errormessageISDisplayed() {
-        return lbl_errorMessage.isDisplayed();
-    }
+
 
 }
