@@ -33,6 +33,8 @@ public class LoginDefinitions {
         login.typeUsername("standard_user");
         login.typepassword("secret_sauce");
         login.clicklogin();
+        // se le agregar mas cosas al codigo
+
     }
 
     @Then("nos deslogeamos de la aplicacion")
@@ -42,6 +44,7 @@ public class LoginDefinitions {
         login.clickMenu();
         login.clickDeslogeo();
         login.visualizacionDeslogueo();
+
 
     }
 

@@ -10,6 +10,7 @@ Feature: CP02 - Validar la seleccion de un producto
     When ingresa credenciales validas
     And la aplicacion deberia mostrar el modulo principal de producto
     And seleccionamos un producto y su visualiazacion
+    And lo añadimos al carrito de compras y visualizamos el carrito de compras
     Then nos deslogeamos de la aplicacion
 
 
