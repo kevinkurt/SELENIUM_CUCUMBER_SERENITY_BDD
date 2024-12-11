@@ -1,7 +1,7 @@
 @Suite @Login
-Feature: CP02 - Validar la seleccion de un producto
+Feature: CP01 - Validar el inicion de sesion y deslogueo
 # aqui se realiza la descripcion nueva y titulo
-  Background: validar el la seleccion correcta de un producto en la pagina
+  Background: validar el uso de credenciales y realizar el inicio de sesion en la pagina
 # dejamos lo que nos funcione
     Given el usuario navega al sitio web
 
@@ -9,9 +9,7 @@ Feature: CP02 - Validar la seleccion de un producto
   Scenario: 1- validar seleccion correcta de un producto
     When ingresa credenciales validas
     And la aplicacion deberia mostrar el modulo principal de producto
-    And seleccionamos un producto y su visualiazacion
-    And lo añadimos al carrito de compras y visualizamos el carrito de compras
-    Then nos deslogeamos de la aplicacion
+   Then nos deslogeamos de la aplicacion
 
 
 

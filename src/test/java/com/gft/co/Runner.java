@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/feactures",
         glue = "com.gft.co.definitions",
-        tags = "@Login"
+        tags = "@Carrito"
 )
 public class Runner {
 
